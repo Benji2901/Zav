@@ -33,7 +33,7 @@ chain = LLMChain(llm=llm, prompt=prompt_template)
 def load_data(file_path):
     return pd.read_csv(file_path)
 
-file_path = '/content/sti_data.csv'
+file_path = r"C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\sti_data.csv"
 try:
     text_data = load_data(file_path)
 except Exception as e:
@@ -79,15 +79,15 @@ def image_to_base64(image_path):
         return None
 
 # Ensure image paths are correctly set
-sage_image_base64 = image_to_base64('images/SAGE.png')
-user_image_base64 = image_to_base64('images/user_logo.jpg')
+sage_image_base64 = image_to_base64(r'C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\SAGE.png')
+user_image_base64 = image_to_base64(r"C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\user_logo.jpg")
 
 # Streamlit interface
 st.title("SAGE - Sexual Awareness & Guidance Expert")
 st.write("Ask me anything about sexual health!")
 
 # Display avatar
-avatar_path = 'images/SAGE.png'  # Replace with your actual avatar path
+avatar_path = "C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\SAGE.png"  # Replace with your actual avatar path
 if os.path.exists(avatar_path):
     avatar = Image.open(avatar_path)
     st.sidebar.image(avatar, use_column_width=True)
