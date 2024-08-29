@@ -79,15 +79,15 @@ def image_to_base64(image_path):
         return None
 
 # Ensure image paths are correctly set
-sage_image_base64 = image_to_base64(r'C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\SAGE.png')
-user_image_base64 = image_to_base64(r"C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\user_logo.jpg")
+sage_image_base64 = image_to_base64(SAGE.png)
+user_image_base64 = image_to_base64(user_logo.jpg)
 
 # Streamlit interface
 st.title("SAGE - Sexual Awareness & Guidance Expert")
 st.write("Ask me anything about sexual health!")
 
 # Display avatar
-avatar_path = "C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\SAGE.png"  # Replace with your actual avatar path
+avatar_path = SAGE.png  # Replace with your actual avatar path
 if os.path.exists(avatar_path):
     avatar = Image.open(avatar_path)
     st.sidebar.image(avatar, use_column_width=True)
