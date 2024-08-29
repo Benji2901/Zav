@@ -24,7 +24,7 @@ prompt_template = PromptTemplate(
 )
 
 # Initialize the OpenAI model
-llm = OpenAI(api_key='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')
+llm = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 chain = LLMChain(llm=llm, prompt=prompt_template)
 
 # Load the text data with caching
