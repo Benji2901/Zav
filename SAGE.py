@@ -33,7 +33,7 @@ chain = LLMChain(llm=llm, prompt=prompt_template)
 def load_data(file_path):
     return pd.read_csv(file_path)
 
-file_path = r"C:\Users\Zhaveah Benjamin\Desktop\Coding\Stem Camp AI Coding\finalStreamlitApp\sti_data.csv"
+file_path = sti_data.csv
 try:
     text_data = load_data(file_path)
 except Exception as e:
