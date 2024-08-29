@@ -1,4 +1,3 @@
-%%writefile Sage_App.py
 
 import os
 import streamlit as st
