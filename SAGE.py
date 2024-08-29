@@ -1,6 +1,10 @@
+%%writefile Sage_App.py
+
 import os
 import streamlit as st
 import pandas as pd
+from langchain.chains import LLMChain
+
 from langchain.chains import LLMChain
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
