@@ -1,70 +1,19 @@
-# Set the background color for the main content and the sidebar using custom CSS
-import streamlit as st
+# .streamlit/config.toml
 
-st.markdown("""
-    <style>
-    /* General styling for the main content area */
-    .stApp {
-        background-color: #b8cfec; /* Light Blue for main content */
-        color: #333333; /* Darker text color for better readability */
-        font-family: 'Arial', sans-serif; /* Custom font family */
-    }
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableWebsocketCompression = false
+maxUploadSize = 100
+enableXsrfProtection = true
 
-    /* Sidebar styling */
-    .css-1v0mbdj.e1fqkh3o1 {
-        background-color: #b8cfec; /* Light Blue for sidebar */
-        color: #333333; /* Darker text color in sidebar */
-    }
+[global]
+theme = "light"
 
-    /* Sidebar header styling */
-    .css-1p2ne1b.e1fqkh3o1 {
-        background-color: #a0b7e2; /* Slightly darker blue for sidebar header */
-        color: #ffffff; /* White text color for sidebar header */
-        font-family: 'Arial', sans-serif; /* Custom font family for sidebar header */
-    }
-
-    /* Sidebar header items styling */
-    .css-1o4l9l1.e1fqkh3o1 {
-        background-color: #a0b7e2; /* Slightly darker blue for header items */
-        color: #ffffff; /* White text color for sidebar header items */
-    }
-
-    /* Text input field styling */
-    .css-1d391kg {
-        background-color: #ffffff; /* White background for input fields */
-        color: #333333; /* Dark text color for input fields */
-        border: 1px solid #cccccc; /* Light grey border for input fields */
-    }
-
-    .css-1d391kg:focus {
-        border-color: #4a6fa5; /* Blue border on focus */
-        box-shadow: 0 0 0 1px #4a6fa5; /* Blue shadow on focus */
-    }
-
-    /* Buttons styling */
-    .css-1lcbt5e {
-        background-color: #4a6fa5; /* Darker blue for buttons */
-        color: #ffffff; /* White text color for buttons */
-    }
-
-    .css-1lcbt5e:hover {
-        background-color: #355a8a; /* Even darker blue on hover */
-    }
-
-    /* Styling for conversation history */
-    .stWrite {
-        margin-bottom: 20px; /* Spacing between messages */
-    }
-
-    /* Style for images within conversation history */
-    .stWrite img {
-        border-radius: 50%; /* Circular images */
-        margin-right: 10px; /* Space between image and text */
-    }
-
-    /* General text styling */
-    .stWrite p, .stWrite h1, .stWrite h2, .stWrite h3, .stWrite h4, .stWrite h5, .stWrite h6 {
-        color: #333333; /* Darker text color for all text elements */
-    }
-    </style>
-    """, unsafe_allow_html=True)
+[theme]
+primaryColor = "#4a6fa5"
+backgroundColor = "#b8cfec"
+secondaryBackgroundColor = "#a0b7e2"
+textColor = "#333333"
+font = "sans serif"
