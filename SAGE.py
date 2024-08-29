@@ -33,7 +33,7 @@ chain = LLMChain(llm=llm, prompt=prompt_template)
 def load_data(file_path):
     return pd.read_csv(file_path)
 
-file_path = sti_data.csv
+file_path = "sti_data.csv"
 try:
     text_data = load_data(file_path)
 except Exception as e:
@@ -79,15 +79,15 @@ def image_to_base64(image_path):
         return None
 
 # Ensure image paths are correctly set
-sage_image_base64 = image_to_base64(SAGE.png)
-user_image_base64 = image_to_base64(user_logo.jpg)
+sage_image_base64 = image_to_base64("SAGE.png")
+user_image_base64 = image_to_base64("user_logo.jpg")
 
 # Streamlit interface
 st.title("SAGE - Sexual Awareness & Guidance Expert")
 st.write("Ask me anything about sexual health!")
 
 # Display avatar
-avatar_path = SAGE.png  # Replace with your actual avatar path
+avatar_path = "SAGE.png"  # Replace with your actual avatar path
 if os.path.exists(avatar_path):
     avatar = Image.open(avatar_path)
     st.sidebar.image(avatar, use_column_width=True)
